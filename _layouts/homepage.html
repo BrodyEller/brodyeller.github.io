@@ -1,11 +1,56 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
     <title>{{ page.title }}</title>
+    {{ site.bootstrap_css }}
+    {{ site.bootstrap_javascript }}
   </head>
   <body>
-    <h1>{{ site.title }}</h1>
-    <img src="{{ site.url }}/images/{{ page.header_image_name }}" />
+
+
+
+    <header class="container">
+        <div class="row">
+          <a class="col-sm-4" href={{ site.url }}>{{ site.title }}</a>
+          <nav class="col-sm-8 text-right">
+            <p>Recent</p>
+          </nav>
+        </div>
+    </header>
+
+    <!--
+    <a href={{ site.url }}>
+        <img class="jumbotron" src="{{ site.url }}/images/{{ page.header_image_name }}" />
+    </a>
+    -->
+
+    <section class="jumbotron">
+      <div class="container">
+        <h2>{{ site.title }}</h2>
+      </div>
+    </section>
+
   </body>
 </html>
+
+<style>
+header {
+
+}
+
+header .row {
+
+}
+
+.jumbotron {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  background-image: url("{{ site.url }}/images/{{ page.header_image_name }}");
+  background-position: center;
+  height: 400px;
+  margin: 10px;
+}
+
+</style>
