@@ -1,27 +1,24 @@
-<div class="outline">
-  <div class="header">
-    <a id="homepage" href={{ site.url }}><h2>{{ site.title }}</h2></a>
+<div class="navbar navbar-inverse navbar-static-top">
+  <div class="container">
+    <a href={{ site.url }} class="navbar-brand">{{ site.title }}</a>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="nav-item"><a class="nav-link" href={{ site.url }}>Home</a></li>
+        </ul>
   </div>
 </div>
+<!--
+<div class="container-fluid">
+<div class="navbar-header">
+  <a class="navbar-brand" href={{ site.url }}>{{ site.title }}</a>
+  <ul class="navbar navbar-nav">
+    <li><a href="#">Posts</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</div>
+</div>
+-->
 
 <style>
-  html, body {
-    margin: 0px;
-    padding: 0px;
-    background-color: #F2F2F2
-  }
 
-  .header {
-    margin: 10px;
-    padding: 10px;
-  }
-
-  .outline {
-    height: 50px;
-    border-bottom: thin solid #000;
-  }
-
-  #homepage {
-    top: 50px;
-  }
 </style>
