@@ -1,23 +1,73 @@
 ---
-layout: homepage
+header_image_name: sunrise.png
+title: Brody Eller
 ---
 
-<div class="home">
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+    <title>{{ page.title }}</title>
+    {{ site.bootstrap_css }}
+    {{ site.bootstrap_theme }}
+    {{ site.jquery }}
+    {{ site.bootstrap_javascript }}
+  </head>
+  <body>
 
-  <h1 class="page-heading">Posts</h1>
+    {% include header.html %}
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+    <!--
+    <a href={{ site.url }}>
+        <img class="jumbotron" src="{{ site.url }}/images/{{ page.header_image_name }}" />
+    </a>
+    -->
+    <section class="jumbotron">
+      <div class="container-fluid">
+        <h2>{{ site.title }}</h2>
+      </div>
+    </section>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+    <div class="container">
+      <h1 class="page-heading">Posts</h1>
+      <ul class="post-list">
+        {% for post in site.posts %}
+          <li>
+            <h2>
+              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
+            </h2>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+            <small>{{ post.excerpt | remove: '<p>' | remove: '</p>'}}</small>
+            <br>
+            <h5>{{ post.date | date: "%b %-d, %Y" }}</h5>
 
-</div>
+          </li>
+        {% endfor %}
+      </ul>
+      <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+    </div>
+
+  </body>
+</html>
+
+<style>
+
+
+.jumbotron {
+  display: flex;
+  align-items: center;
+  background-position: center;
+  background-image: url("{{ site.url }}/{{ site.images_folder }}/{{ page.header_image_name }}");
+  background-size: cover;
+  height: 250px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+
+}
+
+.jumbotron h2 {
+  align-items: center;
+  text-align: center;
+}
+
+</style>

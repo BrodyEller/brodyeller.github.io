@@ -13,8 +13,8 @@
       </div>
         <div class="navbar-collapse collapse navbar-responsive-collapse navHeaderCollapse">
           <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href={{ site.url }}>Home</a></li>
-            <li><a href="#">Posts</a></li>
+            <li {% if site.title == "Brody Eller" %}class="active"{% endif %}><a href={{ site.url }}>Home</a></li>
+            <li {% if site.title == "Posts" %}class="active"{% endif %}><a href="{{ site.url }}/posts.html">Posts</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
