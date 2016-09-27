@@ -25,7 +25,14 @@
 
     <style>
       .jumbotron {
-        background-image: url("{{ site.url }}/{{ site.images_folder }}/{{ page.header_image }}"")
+        display: flex;
+        align-items: center;
+        background-position: center;
+        background-image: url("{{ site.url }}/{{ site.images_folder }}/{{ page.header_image }}")
+        background-size: cover;
+        height: 250px;
+        margin-top: 0px;
+        margin-bottom: 10px;
       }
     </style>
 
