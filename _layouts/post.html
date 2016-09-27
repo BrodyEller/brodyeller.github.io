@@ -5,7 +5,7 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
-    <title>{{ post.title }}</title>
+    <title>{{ page.title }}</title>
     {{ site.bootstrap_css }}
     {{ site.bootstrap_theme }}
     {{ site.jquery }}
@@ -14,6 +14,20 @@
   <body>
     {% include header.html %}
 
+    <div class="jumbotron">
+      <div class="container">
+        <h2>{{ page.title }}</h2>
+      </div>
+
+    </div>
+
     {{ post.content }}
+
+    <style>
+      .jumbotron {
+        background-image: url("{{ site.url }}/{{ site.images_folder }}/{{ page.header_image }}"")
+      }
+    </style>
+
   </body>
 </html>
