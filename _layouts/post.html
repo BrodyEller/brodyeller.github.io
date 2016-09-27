@@ -23,18 +23,23 @@
 
     {{ post.content }}
 
-    <style>
-      .jumbotron {
-        display: flex;
-        align-items: center;
-        background-position: center;
-        background-image: url("{{ site.url }}/{{ site.images_folder }}/{{ page.header_image }}")
-        background-size: cover;
-        height: 250px;
-        margin-top: 0px;
-        margin-bottom: 10px;
-      }
-    </style>
-
   </body>
 </html>
+
+<style>
+  .jumbotron {
+    display: flex;
+    align-items: center;
+    background-position: center;
+    background-image: url("{{ site.url }}/{{ site.images_folder }}/{{ page.header_image }}")
+    background-size: cover;
+    height: 250px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+
+  .jumbotron h2 {
+    align-items: center;
+    text-align: center;
+  }
+</style>
