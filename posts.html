@@ -14,5 +14,30 @@ title: Posts
   </head>
   <body>
     {% include header.html %}
+
+    <div class="container">
+      <h1 class="page-heading">Posts</h1>
+      <ul class="post-list">
+        {% for post in site.posts %}
+          <li>
+            <h2>
+              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
+            </h2>
+
+            <small>{{ post.excerpt | remove: '<p>' | remove: '</p>'}}</small>
+            <br>
+            <h5>{{ post.date | date: "%b %-d, %Y" }}</h5>
+
+          </li>
+        {% endfor %}
+      </ul>
+      <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+    </div>
   </body>
 </html>
+
+<style>
+  h1 {
+    text-align: center;
+  }
+</style>
