@@ -24,25 +24,27 @@ title: Brody Eller
     -->
     <section class="jumbotron">
       <div class="container-fluid">
-        <h2>{{ site.title }}</h2>
+        <h1 class="display-1">{{ site.title }}</h1>
       </div>
     </section>
 
     <div class="container">
-      <h1 class="page-heading">Posts</h1>
-      <ul class="post-list">
+      <h1>Posts</h1>
+      <ul class="list-group">
+
         {% for post in site.posts %}
-          <li>
+          <a href="{{ post.url | prepend: site.baseurl }}" class="list-group-item list-group-item-action">
             <h2>
-              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
+              {{ post.title | escape }}
             </h2>
 
             <small>{{ post.excerpt | remove: '<p>' | remove: '</p>'}}</small>
             <br>
             <h5>{{ post.date | date: "%b %-d, %Y" }}</h5>
 
-          </li>
+          </a>
         {% endfor %}
+
       </ul>
       <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
     </div>
