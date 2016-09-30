@@ -1,26 +1,26 @@
-<footer class="panel panel-default" role="navigation" >
-
-
+<footer class="panel panel-default" role="navigation">
       <div class="panel-heading">
           <a href={{ site.url }} class="panel-title">{{ site.title }}</a>
       </div>
 
 
       <div class="panel-body">
-        <div class="col-sm-3">
+        <div class="col-sm-4">
           <div class="icons">
-            <a target="_blank" href="https://twitter.com/{{ site.twitter_username }}"><img style="height:40px; width:40px;" src="{{ site.url }}/{{ site.assets_folder }}/{{ site.twitter_image }}"/></a>
-            <a target="_blank" href="https://github.com/{{ site.github_username }}"><img style="height:40px; width:40px;" src="{{ site.url }}/{{ site.assets_folder }}/{{ site.github_image }}"/></a>
-            <a href="{{ "/feed.xml" | prepend: site.baseurl }}"><img style="height:40px; width:40px;" src="{{ site.url }}/{{ site.assets_folder }}/{{ site.rss_image }}"/></a>
-            <a href="https://www.instagram.com/{{ site.instagram_username }}"><img style="height:40px; width:40px;" src="{{ site.url }}/{{ site.assets_folder }}/{{ site.instagram_image }}"/></a>
+            <a title="Twitter" target="_blank" href="https://twitter.com/{{ site.twitter_username }}"><img style="height:40px; width:40px;" src="{{ site.url }}/{{ site.assets_folder }}/{{ site.twitter_image }}"/></a>
+            <a title="GitHub" target="_blank" href="https://github.com/{{ site.github_username }}"><img style="height:40px; width:40px;" src="{{ site.url }}/{{ site.assets_folder }}/{{ site.github_image }}"/></a>
+            <a title="RSS" href="{{ "/feed.xml" | prepend: site.baseurl }}"><img style="height:40px; width:40px;" src="{{ site.url }}/{{ site.assets_folder }}/{{ site.rss_image }}"/></a>
+            <a title="Instagram" target="_blank" href="https://www.instagram.com/{{ site.instagram_username }}"><img style="height:40px; width:40px;" src="{{ site.url }}/{{ site.assets_folder }}/{{ site.instagram_image }}"/></a>
           </div>
+          <h6>Copyright &copy Brody Eller 2016. Powered by Jekyll. </h6>
         </div>
       </div>
 
 </footer>
 
 <style>
-.icons {
-
-}
+  footer {
+    height: 100%;
+    padding-bottom: 0px;
+  }
 </style>

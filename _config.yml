@@ -19,6 +19,9 @@ description: > # this means to ignore newlines until "baseurl:"
   Subscribe today for awesome articles about my iOS applications and politics!
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://brodyeller.com" # the base hostname & protocol for your site
+
+reading_speed: 200 # Words per Minute
+
 twitter_username: brodlycooper
 github_username:  BrodyEller
 instagram_username: brodlycooper
