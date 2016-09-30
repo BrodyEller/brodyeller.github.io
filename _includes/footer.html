@@ -1,10 +1,15 @@
-<nav class="navbar navbar-default navbar-static-bottom">
+<nav class="panel panel-default" role="navigation" >
   <div class="container">
     <div class="footer">
 
-      <div class="col-sm-2">
+      <div class="col-sm-4">
           <a href={{ site.url }} class="navbar-brand">{{ site.title }}</a>
       </div>
+
+      <div class="col-sm-8">
+
+      </div>
+
       <div class="col-sm-4">
         <a target="_blank" href="https://twitter.com/{{ site.twitter_username }}"><img style="height:40px; width:40px;" src="{{ site.url }}/{{ site.assets_folder }}/{{ site.twitter_image }}"/></a>
         <a target="_blank" href="https://github.com/{{ site.github_username }}"><img style="height:40px; width:40px;" src="{{ site.url }}/{{ site.assets_folder }}/{{ site.github_image }}"/></a>
@@ -17,5 +22,6 @@
   .footer {
     display: flex;
     flex-direction: column;
+    height: 100%;
   }
 </style>
