@@ -1,10 +1,21 @@
-<nav class="navbar navbar-default navbar-bottom">
+<nav class="navbar navbar-default navbar-static-bottom">
   <div class="container">
-    <div class="navbar-header">
-      <a href={{ site.url }} class="navbar-brand">{{ site.title }}</a>
-    </div>
-    <div class="navbar nav">
-      <a href="https://twitter.com/{{ site.twitter_username }}"><img src="{{ site.url }}/{{ site.assets_folder }}/{{ site.twitter_image }}"/></a>
+    <div class="footer">
+
+      <div class="col-sm-2">
+          <a href={{ site.url }} class="navbar-brand">{{ site.title }}</a>
+      </div>
+      <div class="col-sm-4">
+        <a target="_blank" href="https://twitter.com/{{ site.twitter_username }}"><img style="height:40px; width:40px;" src="{{ site.url }}/{{ site.assets_folder }}/{{ site.twitter_image }}"/></a>
+        <a target="_blank" href="https://github.com/{{ site.github_username }}"><img style="height:40px; width:40px;" src="{{ site.url }}/{{ site.assets_folder }}/{{ site.github_image }}"/></a>
+      </div>
     </div>
   </div>
 </nav>
+
+<style>
+  .footer {
+    display: flex;
+    flex-direction: column;
+  }
+</style>
