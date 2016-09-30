@@ -1,26 +1,23 @@
-<nav class="panel panel-default" role="navigation" >
-  <div class="container">
-    <div class="footer">
+<footer class="panel panel-default" role="navigation" >
 
-      <div class="col-sm-4">
-          <a href={{ site.url }} class="navbar-brand">{{ site.title }}</a>
+
+      <div class="panel-heading">
+          <a href={{ site.url }} class="panel-title">{{ site.title }}</a>
       </div>
 
-      <div class="col-sm-8">
 
-      </div>
-
-      <div class="col-sm-4">
+      <div class="panel-body">
         <a target="_blank" href="https://twitter.com/{{ site.twitter_username }}"><img style="height:40px; width:40px;" src="{{ site.url }}/{{ site.assets_folder }}/{{ site.twitter_image }}"/></a>
         <a target="_blank" href="https://github.com/{{ site.github_username }}"><img style="height:40px; width:40px;" src="{{ site.url }}/{{ site.assets_folder }}/{{ site.github_image }}"/></a>
+        <a href="{{ "/feed.xml" | prepend: site.baseurl }}"><img style="height:40px; width:40px;" src="{{ site.url }}/{{ site.assets_folder }}/{{ site.rss_image }}"/></a>
       </div>
-    </div>
-  </div>
-</nav>
+
+</footer>
 
 <style>
-  .footer {
+  footer {
     display: flex;
+    text-align: left;
     flex-direction: column;
     height: 100%;
   }
