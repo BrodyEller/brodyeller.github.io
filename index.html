@@ -32,23 +32,25 @@ title: Brody Eller
       <h1>Posts</h1>
       <ul class="list-group">
 
-        {% for post in site.posts %}
-          <a href="{{ post.url | prepend: site.baseurl }}" class="list-group-item list-group-item-action">
-            <h2>
-              {{ post.title | escape }}
-            </h2>
+        {% for post in site.posts limit: site.paginate %}
 
-            <small>{{ post.excerpt | remove: '<p>' | remove: '</p>'}}</small>
+            <a href="{{ post.url | prepend: site.baseurl }}" class="list-group-item list-group-item-action">
+              <h2>
+                {{ post.title | escape }}
+              </h2>
 
-            {% if post.content | number_of_words > site.reading_speed %}
-              <h5>Estimated Reading Time: &lt1min.</h5>
-            {% else %}
-              <h5>Estimated Reading Time: {{ post.content | number_of_words | divided_by: site.reading_speed }}min.</h5>
-            {% endif %}
+              <small>{{ post.excerpt | remove: '<p>' | remove: '</p>'}}</small>
 
-            <h5>{{ post.date | date: "%b %-d, %Y" }}</h5>
+              {% if post.content | number_of_words > site.reading_speed %}
+                <h5>Estimated Reading Time: &lt1min.</h5>
+              {% else %}
+                <h5>Estimated Reading Time: {{ post.content | number_of_words | divided_by: site.reading_speed }}min.</h5>
+              {% endif %}
 
-          </a>
+              <h5>{{ post.date | date: "%b %-d, %Y" }}</h5>
+
+            </a>
+
         {% endfor %}
 
       </ul>
@@ -70,7 +72,6 @@ title: Brody Eller
   height: 250px;
   margin-top: 0px;
   margin-bottom: 10px;
-  box-shadow: 0px 0px 5px 1px; #000;
 }
 
 .jumbotron h2 {

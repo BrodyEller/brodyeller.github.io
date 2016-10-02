@@ -1,0 +1,83 @@
+---
+title: Posts
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+    <title>{{ page.title }}</title>
+    {{ site.bootstrap_css }}
+    {{ site.bootstrap_theme }}
+    {{ site.jquery }}
+    {{ site.bootstrap_javascript }}
+  </head>
+  <body>
+    {% include header.html %}
+
+    <div class="container">
+      <h1 class="page-heading">Posts</h1>
+      <ul class="list-group">
+
+        {% for post in paginator.posts %}
+          <a href="{{ post.url | prepend: site.baseurl }}" class="list-group-item list-group-item-action">
+            <h2>
+              {{ post.title | escape }}
+            </h2>
+
+            <small>{{ post.excerpt | remove: '<p>' | remove: '</p>' | markdownify }}</small>
+
+            {% if post.content | number_of_words > site.reading_speed %}
+              <h5>Estimated Reading Time: &lt1min.</h5>
+            {% else %}
+              <h5>Estimated Reading Time: {{ post.content | number_of_words | divided_by: site.reading_speed }}min.</h5>
+            {% endif %}
+
+            <h5>{{ post.date | date: "%b %-d, %Y" }}</h5>
+
+          </a>
+        {% endfor %}
+
+      </ul>
+
+      {% if paginator.total_pages > 1 %}
+      <div class="page_bar">
+        <ul class="pagination">
+              {% if paginator.previous_page %}
+                <li><a href="{{ paginator.previous_page_path }}">Previous</a></li>
+              {% else %}
+                <li class="disabled" ><a href="{{ paginator.previous_page_path }}">Previous</a></li>
+              {% endif %}
+
+              {% for page in (1..paginator.total_pages) %}
+                {% if page == 1 %}
+                  <li {% if page == paginator.page %}class="active"{% endif %} ><a href="/blog/">{{ page }}</a></li>
+                {% else %}
+                <li {% if page == paginator.page %}class="active"{% endif %} ><a href="{{ site.paginate_path | prepend: "/" | replace: ":num", page }}">{{ page }}</a></li>
+                {% endif %}
+              {% endfor %}
+
+              {% if paginator.next_page %}
+                <li><a href="{{ paginator.next_page_path }}">Next</a></li>
+              {% else %}
+                <li class="disabled" ><a href="#">Next</a></li>
+              {% endif %}
+        </ul>
+      </div>
+      {% endif %}
+    </div>
+
+    {% include footer.html %}
+
+  </body>
+</html>
+
+<style>
+  h1 {
+    text-align: center;
+  }
+
+  .page_bar {
+    text-align: center;
+  }
+</style>
