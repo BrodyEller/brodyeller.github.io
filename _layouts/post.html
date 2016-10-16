@@ -18,7 +18,11 @@
       <div class="container">
         <h2>{{ page.title }}</h2>
 
-
+        {% if page.content | number_of_words > site.reading_speed %}
+          <h4>Estimated Reading Time: &lt1min.</h4>
+        {% else %}
+          <h4>Estimated Reading Time: {{ page.content | number_of_words | divided_by: site.reading_speed }}min.</h4>
+        {% endif %}
 
         <h4>{{ page.date | date: "%b %-d, %Y" }}</h4>
       </div>

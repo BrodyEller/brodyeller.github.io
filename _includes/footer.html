@@ -1,7 +1,6 @@
-<footer class="panel panel-default" role="navigation">
-      <div class="panel-heading">
-          <a href={{ site.url }} class="panel-title">{{ site.title }}</a>
-      </div>
+<footer class="" role="navigation">
+  <div class="container">
+
 
 
       <div class="panel-body">
@@ -12,15 +11,20 @@
             <a title="RSS" href="{{ "/feed.xml" | prepend: site.baseurl }}"><img style="height:40px; width:40px;" src="{{ site.url }}/{{ site.assets_folder }}/{{ site.rss_image }}"/></a>
             <a title="Instagram" target="_blank" href="https://www.instagram.com/{{ site.instagram_username }}"><img style="height:40px; width:40px;" src="{{ site.url }}/{{ site.assets_folder }}/{{ site.instagram_image }}"/></a>
           </div>
+        </div>
+        <br>
+        <div class="col-sm-12">
           <h6>Copyright &copy Brody Eller 2016. Powered by Jekyll. </h6>
         </div>
       </div>
 
+    </div>
 </footer>
 
 <style>
   footer {
-    height: 100%;
-    padding-bottom: 0px;
+    padding: 0px;
+    margin: 0px;
+    background-color: #ebebeb;
   }
 </style>

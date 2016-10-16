@@ -29,32 +29,46 @@ title: Brody Eller
     </section>
 
     <div class="container">
-      <h1>Posts</h1>
-      <ul class="list-group">
+      <div class="col-sm-8">
+        <h1>Posts</h1>
+        <ul class="list-group">
 
-        {% for post in site.posts limit: site.paginate %}
+          {% for post in site.posts limit: site.paginate %}
 
-            <a href="{{ post.url | prepend: site.baseurl }}" class="list-group-item list-group-item-action">
-              <h2>
-                {{ post.title | escape }}
-              </h2>
+              <a href="{{ post.url | prepend: site.baseurl }}" class="list-group-item list-group-item-action">
+                <h2>
+                  {{ post.title | escape }}
+                </h2>
 
-              <small>{{ post.excerpt | remove: '<p>' | remove: '</p>'}}</small>
+                <small>{{ post.excerpt | remove: '<p>' | remove: '</p>'}}</small>
 
-              {% if post.content | number_of_words > site.reading_speed %}
-                <h5>Estimated Reading Time: &lt1min.</h5>
-              {% else %}
-                <h5>Estimated Reading Time: {{ post.content | number_of_words | divided_by: site.reading_speed }}min.</h5>
-              {% endif %}
+                {% if post.content | number_of_words > site.reading_speed %}
+                  <h5>Estimated Reading Time: &lt1min.</h5>
+                {% else %}
+                  <h5>Estimated Reading Time: {{ post.content | number_of_words | divided_by: site.reading_speed }}min.</h5>
+                {% endif %}
 
-              <h5>{{ post.date | date: "%b %-d, %Y" }}</h5>
+                <h5>{{ post.date | date: "%b %-d, %Y" }}</h5>
 
-            </a>
+              </a>
 
-        {% endfor %}
+          {% endfor %}
 
-      </ul>
+        </ul>
+      </div>
+
+      <div class="col-sm-4 hidden-xs">
+        <a class="twitter-timeline" data-lang="en" data-width="100%" data-height="330" data-theme="light" href="https://twitter.com/brodlycooper">Tweets by brodlycooper</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </div>
+
     </div>
+<!--
+    <div class="twitter-feed">
+      <div class="col-sm-4">
+        <a class="twitter-timeline" data-lang="en" data-width="100%" data-height="100%" data-theme="light" href="https://twitter.com/brodlycooper">Tweets by brodlycooper</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </div>
+    </div>
+    -->
 
     {% include footer.html %}
 
@@ -77,4 +91,6 @@ title: Brody Eller
 .jumbotron h2 {
   text-align: center;
 }
+
+
 </style>

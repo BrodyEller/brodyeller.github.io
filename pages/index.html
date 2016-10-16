@@ -1,0 +1,53 @@
+---
+title: Posts
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+    <title>{{ page.title }}</title>
+    {{ site.bootstrap_css }}
+    {{ site.bootstrap_theme }}
+    {{ site.jquery }}
+    {{ site.bootstrap_javascript }}
+  </head>
+  <body>
+    {% include header.html %}
+
+    <div class="container">
+      <h1 class="page-heading">Posts</h1>
+      <ul class="list-group">
+
+        {% for post in paginator.posts %}
+          <a href="{{ post.url | prepend: site.baseurl }}" class="list-group-item list-group-item-action">
+            <h2>
+              {{ post.title | escape }}
+            </h2>
+
+            <small>{{ post.excerpt | remove: '<p>' | remove: '</p>'}}</small>
+
+            {% if post.content | number_of_words > site.reading_speed %}
+              <h5>Estimated Reading Time: &lt1min.</h5>
+            {% else %}
+              <h5>Estimated Reading Time: {{ post.content | number_of_words | divided_by: site.reading_speed }}min.</h5>
+            {% endif %}
+
+            <h5>{{ post.date | date: "%b %-d, %Y" }}</h5>
+
+          </a>
+        {% endfor %}
+
+      </ul>
+    </div>
+
+    {% include footer.html %}
+
+  </body>
+</html>
+
+<style>
+  h1 {
+    text-align: center;
+  }
+</style>
