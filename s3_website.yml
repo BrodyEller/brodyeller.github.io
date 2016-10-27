@@ -1,7 +1,7 @@
 s3_id: AKIAJDNLQR4DHNLRYHSQ
 s3_secret: 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
 s3_bucket: brodyeller.com
-cloudfront_distribution_id: E18NDFTVFXV1BR
+cloudfront_distribution_id: E6DMLKFAIQG2R
 
 # Below are examples of all the available configurations.
 # See README for more detailed info on each of them.
