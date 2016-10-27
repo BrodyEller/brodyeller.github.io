@@ -13,10 +13,40 @@ title: About
     {{ site.bootstrap_javascript }}
   </head>
   <body>
-    {{ include header.html }}
+    {% include header.html %}
 
-    
+    <div class="container">
+        <h3>About Me:</h3>
+        <h5>I enjoy programming and running cross country. I'm almost finished my first app, To Russia With Love, which will be released on the App Store. I love to watch movies and my favorite is October Sky.</h5>
+    </div>
 
-    {{ include footer.html }}
+    <div class="container">
+      <h3>Projects:</h3>
+    </div>
+
+    <div class="container">
+      <div class="col-sm-3" id="to_russia_with_love_img">
+        <img class="img-responsive" src="{{ site.url }}/{{ site.images_folder }}/to_russia_with_love_img.png" alt="" />
+      </div>
+      <div class="col-sm-9">
+        <h5>To Russia With Love is a game where 4 countries, America, England, Russia, and China, compete for world domination!  Each country has the ability to build it's economy by investing in different businesses.  They can use the money they've earned to build armies and nuclear weapons for world domination.</h5>
+      </div>
+    </div>
+
+    {% include footer.html %}
   </body>
 </html>
+
+<style media="screen">
+  #to_russia_with_love_img {
+    background-position: center;
+    background-size: cover;
+    padding: 10px;
+  }
+</style>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+
+  });
+</script>
