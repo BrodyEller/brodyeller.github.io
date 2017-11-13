@@ -1,4 +1,4 @@
-<footer class="" role="navigation">
+<footer class="panel" role="navigation">
   <div class="container">
 
 
@@ -6,11 +6,18 @@
       <div class="panel-body">
         <div class="col-sm-4">
           <div class="icons">
-            <a title="Twitter" target="_blank" href="https://twitter.com/{{ site.twitter_username }}"><img style="height:40px; width:40px;" src="{{ site.url }}/{{ site.assets_folder }}/{{ site.twitter_image }}"/></a>
-            <a title="GitHub" target="_blank" href="https://github.com/{{ site.github_username }}"><img style="height:40px; width:40px;" src="{{ site.url }}/{{ site.assets_folder }}/{{ site.github_image }}"/></a>
-            <a title="RSS" href="{{ "/feed.xml" | prepend: site.baseurl }}"><img style="height:40px; width:40px;" src="{{ site.url }}/{{ site.assets_folder }}/{{ site.rss_image }}"/></a>
-            <a title="Instagram" target="_blank" href="https://www.instagram.com/{{ site.instagram_username }}"><img style="height:40px; width:40px;" src="{{ site.url }}/{{ site.assets_folder }}/{{ site.instagram_image }}"/></a>
+            <a title="Twitter" target="_blank" href="https://twitter.com/{{ site.twitter_username }}">Twitter</a>
+            <a title="GitHub" target="_blank" href="https://github.com/{{ site.github_username }}">GitHub</a>
+            <a title="RSS" href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a>
+            <a title="Instagram" target="_blank" href="https://www.instagram.com/{{ site.instagram_username }}">Instagram</a>
           </div>
+
+          <!--
+            <img style="height:40px; width:40px;" src="{{ site.url }}/{{ site.assets_folder }}/{{ site.twitter_image }}"/>
+            <img style="height:40px; width:40px;" src="{{ site.url }}/{{ site.assets_folder }}/{{ site.github_image }}"/>
+            <img style="height:40px; width:40px;" src="{{ site.url }}/{{ site.assets_folder }}/{{ site.rss_image }}"/>
+            <img style="height:40px; width:40px;" src="{{ site.url }}/{{ site.assets_folder }}/{{ site.instagram_image }}"/>
+          -->
         </div>
         <br>
         <div class="col-sm-12">
@@ -33,5 +40,9 @@
     margin-top: 10px;
     {% endif %}
     background-color: #ebebeb;
+  }
+
+  .panel {
+    border-top: thin solid #00FF1E;
   }
 </style>

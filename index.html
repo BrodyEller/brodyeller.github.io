@@ -1,5 +1,5 @@
 ---
-header_image_name: sunrise.png
+header_image_name: jumbotron_bg_2.png
 title: Brody Eller
 ---
 
@@ -29,6 +29,17 @@ title: Brody Eller
     </section>
 
     <div class="container">
+      <div class="col-sm-10">
+        <h2>To Russia With Love Released!  Download Now!</h2>
+      </div>
+      <div class="col-sm-2">
+          <a href="https://itunes.apple.com/us/app/to-russia-with-love/id1178507671?ls=1&mt=8"><img src="{{ site.url }}/{{ site.images_folder }}/Download_on_the_App_Store_Badge_US-UK_135x40.svg" alt=""></a>
+      </div>
+    </div>
+
+
+
+    <div class="container">
       <div class="col-sm-8">
         <h1>Posts</h1>
         <ul class="list-group">
@@ -42,11 +53,14 @@ title: Brody Eller
 
                 <small>{{ post.excerpt | remove: '<p>' | remove: '</p>'}}</small>
 
-                {% if post.content | number_of_words > site.reading_speed %}
+<!--
+                {% if post.content | number_of_words == site.reading_speed %}
                   <h5>Estimated Reading Time: &lt1min.</h5>
                 {% else %}
                   <h5>Estimated Reading Time: {{ post.content | number_of_words | divided_by: site.reading_speed }}min.</h5>
-                {% endif %}
+              {% endif %}
+            -->
+            <h5>Brody Eller</h5>
 
                 <h5>{{ post.date | date: "%b %-d, %Y" }}</h5>
 
@@ -58,7 +72,7 @@ title: Brody Eller
       </div>
 
       <div class="col-sm-4 hidden-xs">
-        <a class="twitter-timeline" data-lang="en" data-width="100%" data-height="330" data-theme="light" href="https://twitter.com/brodlycooper">Tweets by brodlycooper</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <a class="twitter-timeline" data-lang="en" data-width="100%" data-height="330" data-theme="dark" href="https://twitter.com/brodlycooper">Tweets by brodlycooper</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
       </div>
 
     </div>

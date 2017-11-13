@@ -28,11 +28,14 @@
       <div class="container">
         <h2>{{ page.title }}</h2>
 
+<!--
         {% if page.content | number_of_words > site.reading_speed %}
           <h4>Estimated Reading Time: &lt1min.</h4>
         {% else %}
           <h4>Estimated Reading Time: {{ page.content | number_of_words | divided_by: site.reading_speed }}min.</h4>
         {% endif %}
+      -->
+      <h4>Brody Eller</h4>
 
         <h4>{{ page.date | date: "%b %-d, %Y" }}</h4>
       </div>
@@ -67,8 +70,12 @@
     margin-bottom: 10px;
   }
 
-  .jumbotron h2, h4 {
+  .jumbotron h2, h3, h4 {
     align-items: center;
     text-align: center;
+  }
+
+  img {
+    width: 100%;
   }
 </style>
