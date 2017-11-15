@@ -1,0 +1,60 @@
+---
+title: Games
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+    <title>{{ page.title }}</title>
+    {{ site.bootstrap_css }}
+    {{ site.bootstrap_theme }}
+    {{ site.jquery }}
+    {{ site.bootstrap_javascript }}
+  </head>
+  <body>
+    {% include header.html %}
+
+    <div class="container">
+      <h3>Games:</h3>
+    </div>
+
+    <div class="container">
+        <ul class="list-group">
+          <!-- <a href="#" class="list-group-item list-group-item-action">
+            <div class="col-sm-3" id="to_russia_with_love_img">
+              <img class="img-responsive" src="{{ site.url }}/{{ site.images_folder }}/to_russia_with_love_img.png" alt="" />
+            </div>
+            <div class="col-sm-9">
+              <h5>To Russia With Love is a game where coutnries of the world compete for world domination!  Each country has the ability to build it's economy by investing in different businesses.  They can use the money they've earned to build armies and nuclear weapons for world domination.</h5>
+            </div>
+        </a> -->
+
+        <a href="https://itunes.apple.com/us/app/to-russia-with-love/id1178507671?ls=1&mt=" class="list-group-item list-group-item-action">
+            <h3>To Russia With Love</h3>
+            <h5>To Russia With Love is a game where countries of the world compete for world domination!  Each country has the ability to build it's economy by investing in different businesses.  They can use the money they've earned to build armies and nuclear weapons for world domination.</h5>
+        </a>
+        <a href="{{ site.url }}/{{ site.games_folder }}/spacewar" class="list-group-item list-group-item-action">
+            <h3>Spacewar</h3>
+            <h5>This is a remake of the game Spacewar in the Godot Game Engine.</h5>
+        </a>
+        </ul>
+    </div>
+
+    {% include footer.html %}
+  </body>
+</html>
+
+<style media="screen">
+  #to_russia_with_love_img {
+    background-position: center;
+    background-size: cover;
+    padding: 10px;
+  }
+</style>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+
+  });
+</script>

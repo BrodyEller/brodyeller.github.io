@@ -18,7 +18,7 @@ email: wviper3@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Personal website of app and game developer Brody Eller
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://brodyeller.com" # the base hostname & protocol for your site
+url: "http://brodyeller.com" # the base hostname & protocol for your site
 
 paginate: 5
 paginate_path: "blog/page:num/"
@@ -31,15 +31,16 @@ instagram_username: brodlycooper
 
 images_folder: images
 assets_folder: assets
+games_folder: games
 
 twitter_image: Twitter_Social_Icon_Blue.svg
 github_image: Github-Mark.svg
 rss_image: RSS-Icon.svg
 instagram_image: glyph-logo_May2016.png
 
-jquery: <script   src="https://code.jquery.com/jquery-3.1.1.js"   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="   crossorigin="anonymous"></script>
-bootstrap_css: <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-bootstrap_theme: <link rel="stylesheet" type="text/css" href="https://brodyeller.com/custom_bootstrap_theme.css">
+jquery: <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+bootstrap_css: <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+bootstrap_theme: <link rel="stylesheet" type="text/css" href="http://brodyeller.com/custom_bootstrap_theme.css">
 bootstrap_javascript: <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 # Build settings
