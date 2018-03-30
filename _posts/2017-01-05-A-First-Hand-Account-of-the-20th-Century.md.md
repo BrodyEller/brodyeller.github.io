@@ -5,6 +5,7 @@ date:   2017-01-05 23:24:19 -0400
 categories: post
 header_image: enola_gay.jpg
 excerpt: The 20th Century was a mix of events and time periods ranging from the first world war to the cold war.  The best way to learn about this time period is to learn it from a person who lived through it.  Yesterday night, I conducted an interview with Hugh Hagan, a member of the 101st Airborne Division.
+published: false
 ---
 The 20th Century was a mix of events and time periods ranging from the first world war to the cold war.  The best way to learn about this time period is to learn it from a person who lived through it.  Yesterday night, I conducted an interview with Hugh Hagan, a member of the 101st Airborne Division.  The interview began with Hagan giving a synopsis of events starting in 1941.  Hagan was born in 1938, which made him 3 years old when Pearl Harbor occurred.  Even though he was only 3, he still remembers the attack to this day.  He recalls people talking about the attack all over the streets, calling it the Sneak Attack.
 
