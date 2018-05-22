@@ -5,6 +5,7 @@ date:   2018-03-30 12:33:19 -0400
 categories: post
 header_image: background_generic.png
 excerpt: Submit offensive phrases for when the Beta release comes this week!
+published: false
 ---
 
 I'm working on a new game inspired by the text to speech feature of twitch and that old game we play every now and then with our friends.  Essentially, you and another player pick phrases for each other to be read out loud on the opposing player's phone.  If that player doesn't stop the text to speech, they get the opportunity to do the same to the other player.  The game continues until one person ends the text to speech.
