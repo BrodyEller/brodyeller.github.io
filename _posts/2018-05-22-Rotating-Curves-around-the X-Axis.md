@@ -32,3 +32,4 @@ where x represents the function of the curve. Then, solve the expression for the
 2. Find the volume of the solid formed by rotating the equation $$ f(x)=\sin{x} $$ between $$ x=0 $$ and $$ x=\pi $$.
 	1. Plug $$ \sin{x} $$ into the formula for area of a circle: $$ \pi \int_{0}^{\pi}{\sin^2{x}} $$
 	2. Evaluate the definite integral: $$ \frac{\pi\Bigl(x-\frac{\sin(2x)}{2}\Bigl)}{2} \Biggr\|_{0}^{\pi} \approx 4.9348 $$
+		* See the full integration at [integral-calculator.com](https://www.integral-calculator.com/#expr=pi%2A%28sinx%29%5E2&lbound=0&ubound=pi)
