@@ -5,7 +5,7 @@ date:   2018-05-22 08:52:19 -0400
 categories: post
 header_image: background_generic.png
 excerpt: You can use the integral of a curve to calculate the volume of an area by rotating it around an axis.
-published: true
+published: false
 ---
   
 You can use the integral of a curve to calculate the volume of an area by rotating it around an axis.
